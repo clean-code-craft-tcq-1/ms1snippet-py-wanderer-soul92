@@ -1,5 +1,5 @@
 
-def  in_tolerance_level(value, nextValue, maxDelta):
+def  in_permissible_range(value, nextValue, maxDelta):
   if nextValue - value > maxDelta:
     return False
   return True
@@ -15,7 +15,7 @@ def validate_Para_reading(values,parameter):
   threshold = { 'soc': 0.05, 'current': 0.1}
   last_but_one_reading = len(values) - 1
   for i in range(last_but_one_reading):
-    if(not in_tolerance_level(values[i], values[i + 1], threshold[parameter])):
+    if(not in_permissible_range(values[i], values[i + 1], threshold[parameter])):
       return False
   return True
 
