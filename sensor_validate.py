@@ -4,7 +4,14 @@ def  in_tolerance_level(value, nextValue, maxDelta):
     return False
   return True
 
-def validate_reading(values,parameter):
+def validate_reading(value,parameter):
+    if value == None:
+        return print("No Value given as input")
+    else:
+        validate_Para_reading(value,parameter)
+
+        
+def validate_Para_reading(values,parameter):
   threshold = { 'soc': 0.05, 'current': 0.1}
   last_but_one_reading = len(values) - 1
   for i in range(last_but_one_reading):
