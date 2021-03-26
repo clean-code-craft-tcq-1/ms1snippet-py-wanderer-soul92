@@ -4,7 +4,7 @@ def  in_permissible_range(value, nextValue, maxDelta):
     return False
   return True
 
-def validate_reading(value,parameter):
+def validate_reading(value,parameter = 'soc'):
     if value == None:
         return print("No Value given as input")
     else:
