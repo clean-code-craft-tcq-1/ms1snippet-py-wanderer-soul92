@@ -14,7 +14,7 @@ class SensorValidatorTest(unittest.TestCase):
   
   def test_reports_error_when_current_jumps(self):
     self.assertFalse(
-     sensor_validate.validate_reading(None, 'current')
+     sensor_validate.validate_reading(None)
     )
 
 if __name__ == "__main__":
